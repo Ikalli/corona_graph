@@ -3,7 +3,7 @@ import { LineChart, XAxis, YAxis, CartesianGrid, Line, Tooltip, Legend, Responsi
 
 const data = [
 	{
-		date: '01.20', 사망자: 0, 확진자: 0,
+		date: '01.20', 사망자: 0, 확진자: 1,
 	},
 	{
 		date: '01.24', 사망자: 0, 확진자: 2,
@@ -27,7 +27,7 @@ const data = [
 		date: '01.30', 사망자: 0, 확진자: 6,
 	},
 	{
-		date: '01.31', 사망자: 0, 확진자: 7,
+		date: '01.31', 사망자: 0, 확진자: 11,
 	},
 	{
 		date: '02.01', 사망자: 0, 확진자: 12,
