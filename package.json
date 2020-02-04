@@ -34,7 +34,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://ekalii.github.io/corona_graph",
+  "homepage": "https://ekalii.github.io/corona_graph",
   "devDependencies": {
     "gh-pages": "^2.2.0"
   }
