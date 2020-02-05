@@ -38,7 +38,7 @@ export default class App extends Component{
         <div className='tail'>
           <p className='source'>출처: 질병관리본부, 해외감염병 NOW</p>
           <p className='feedback'>FeedBack: dev.ekalii@gmail.com</p>
-          <a href="https://github.com/Ekalii/corona_graph" className='github'>Github Source</a>
+          <a href="https://github.com/Ekalii/corona_graph" className='github'>View Github Source</a>
         </div>
       </div>
     );
