@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import KoreaGraph from './koreagraph'
 import './situation.css'
 
 export default class KoreaSituation extends Component{
