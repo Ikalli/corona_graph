@@ -17,8 +17,8 @@ export default class WorldSituation extends Component{
 					<tbody>
 						<tr className='data'>
 							<td>20603명</td>
-							<td>426명</td>
 							<td>0명</td>
+							<td>426명</td>
 						</tr>
 					</tbody>
 				</table>
