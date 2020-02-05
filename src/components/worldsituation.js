@@ -5,6 +5,7 @@ export default class WorldSituation extends Component{
 	render(){
 		return(
 			<div>
+				<p>업데이트: 2020.02.04</p>
 				<table className='patient'>
 					<thead>
 						<tr>

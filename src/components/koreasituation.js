@@ -5,6 +5,7 @@ export default class KoreaSituation extends Component{
 	render(){
 		return(
 			<div>
+				<p>업데이트: 2020.02.05</p>
 				<table className='patient'>
 					<thead>
 						<tr>
