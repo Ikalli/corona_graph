@@ -1,6 +1,43 @@
 import React, { Component } from 'react';
 import { LineChart, XAxis, YAxis, CartesianGrid, Line, Tooltip, Legend, ResponsiveContainer} from 'recharts';
 
+export default class WorldGraph extends Component{
+	state = {
+		data: data
+	}
+
+	weekButtonClicked = () => {
+		this.setState({
+			data: data.slice(-7)
+		})
+	}
+
+	wholeButtonClicked = () => {
+		this.setState({
+			data: data
+		})
+	}
+
+	render(){
+		return(
+			<div>
+				<ResponsiveContainer width='100%' aspect={21.0/9.0}>
+					<LineChart data={this.state.data}>
+						<CartesianGrid />
+						<XAxis dataKey='date' interval='preserveEnd' />
+						<YAxis interval='preserveEnd' />
+						<Legend />
+						<Line type='monotone' dataKey="사망자" stroke='red' />
+						<Line type='monotone' dataKey="확진자" stroke='#8884d8' />
+					</LineChart>
+				</ResponsiveContainer>
+				<button onClick={this.weekButtonClicked}>1주일간 보기</button>
+				<button onClick={this.wholeButtonClicked}>전체기간 보기</button>
+			</div>
+		);
+	}
+}
+
 const data = [
 	{
 		date: '01.19', 사망자: 4, 확진자: 198,
@@ -52,24 +89,8 @@ const data = [
 	},
 	{
 		date: '02.04', 사망자: 426, 확진자: 20603,
+	},
+	{
+		date: '02.05', 사망자: 490, 확진자: 24324,
 	}
 ]
-
-export default class WorldGraph extends Component{
-	render(){
-		return(
-			<div>
-				<ResponsiveContainer width='100%' aspect={21.0/9.0}>
-					<LineChart data={data}>
-						<CartesianGrid />
-						<XAxis dataKey='date' interval='preserveEnd' />
-						<YAxis interval='preserveEnd' />
-						<Legend />
-						<Line type='monotone' dataKey="사망자" stroke='red' />
-						<Line type='monotone' dataKey="확진자" stroke='#8884d8' />
-					</LineChart>
-				</ResponsiveContainer>
-			</div>
-		);
-	}
-}

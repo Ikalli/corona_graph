@@ -1,49 +1,10 @@
 import React, { Component } from 'react';
 import { LineChart, XAxis, YAxis, CartesianGrid, Line, Tooltip, Legend, ResponsiveContainer} from 'recharts';
 
-const data = [
-	{
-		date: '01.20', 사망자: 0, 확진자: 1,
-	},
-	{
-		date: '01.24', 사망자: 0, 확진자: 2,
-	},
-	{
-		date: '01.25', 사망자: 0, 확진자: 2,
-	},
-	{
-		date: '01.26', 사망자: 0, 확진자: 3,
-	},
-	{
-		date: '01.27', 사망자: 0, 확진자: 4,
-	},
-	{
-		date: '01.28', 사망자: 0, 확진자: 4,
-	},
-	{
-		date: '01.29', 사망자: 0, 확진자: 4,
-	},
-	{
-		date: '01.30', 사망자: 0, 확진자: 6,
-	},
-	{
-		date: '01.31', 사망자: 0, 확진자: 11,
-	},
-	{
-		date: '02.01', 사망자: 0, 확진자: 12,
-	},
-	{
-		date: '02.02', 사망자: 0, 확진자: 15,
-	},
-	{
-		date: '02.03', 사망자: 0, 확진자: 15,
-	},
-	{
-		date: '02.04', 사망자: 0, 확진자: 16,
-	}
-]
-
 export default class KoreaGraph extends Component{
+	state = {
+		data: data,
+	}
 	handleClickRed = () => {
 		alert(data.사망자);
 	}
@@ -52,20 +13,80 @@ export default class KoreaGraph extends Component{
 		alert(data.확진자);
 	}
 
+	weekButtonClicked = () => {
+		this.setState({
+			data: data.slice(-7)
+		})
+	}
+
+	wholeButtonClicked = () => {
+		this.setState({
+			data: data
+		})
+	}
+
 	render(){
 		return(
 			<div className='graph'>
 				<ResponsiveContainer width='100%' aspect={21.0/9.0}>
-					<LineChart data={data}>
+					<LineChart data={this.state.data}>
 						<CartesianGrid />
 						<XAxis dataKey='date' interval='preserveEnd' />
 						<YAxis interval='preserveEnd' />
 						<Legend />
-						<Line activedot={{ onClick:this.handleClickRed }} type='monotone' dataKey="사망자" stroke='red' />
 						<Line activedot={{ onClick:this.handleClickPurple }} type='monotone' dataKey="확진자" stroke='#8884d8' />
+						<Line activedot={{ onClick:this.handleClickRed }} type='monotone' dataKey="사망자" stroke='red' />
+						<Line activedot={{ onClick:this.handleClickRed }} type='monotone' dataKey="완치자" stroke='green' />
 					</LineChart>
 				</ResponsiveContainer>
+				<button onClick={this.weekButtonClicked}>1주일간 보기</button>
+				<button onClick={this.wholeButtonClicked}>전체기간 보기</button>
 			</div>
 		);
 	}
 }
+
+const data = [
+	{
+		date: '01.20', 확진자: 1, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '01.24', 확진자: 2, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '01.25', 확진자: 2, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '01.26', 확진자: 3, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '01.27', 확진자: 4, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '01.28', 확진자: 4, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '01.29', 확진자: 4, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '01.30', 확진자: 6, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '01.31', 확진자: 11, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '02.01', 확진자: 12, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '02.02', 확진자: 15, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '02.03', 확진자: 15, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '02.04', 확진자: 16, 사망자: 0, 완치자: 0
+	},
+	{
+		date: '02.05', 확진자: 18, 사망자: 0, 완치자: 0
+	}
+]
