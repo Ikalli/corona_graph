@@ -28,7 +28,7 @@ export default class App extends Component{
         <div className='headline'>
           <span className="title">신종 코로나바이러스<br/>현황 그래프</span>
         </div>
-        <p>업데이트: 2020.02.05 09:00</p>
+        <p>업데이트: 2020.02.05 15:00</p>
         {this.state.viewpoint === 'korea' ? <KoreaGraph /> : <WorldGraph />}
         <div className='btn_group'>
           <button onClick={this.handleKoreaClick} className='korea'>국내 정보</button>

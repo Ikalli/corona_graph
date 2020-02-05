@@ -5,7 +5,7 @@ export default class WorldSituation extends Component{
 	render(){
 		return(
 			<div>
-				<p>업데이트: 2020.02.04</p>
+				<p>업데이트: 2020.02.05</p>
 				<table className='patient'>
 					<thead>
 						<tr>
@@ -16,9 +16,9 @@ export default class WorldSituation extends Component{
 					</thead>
 					<tbody>
 						<tr className='data'>
-							<td>20603명</td>
+							<td>24506명</td>
 							<td>0명</td>
-							<td>426명</td>
+							<td>492명</td>
 						</tr>
 					</tbody>
 				</table>
@@ -36,9 +36,9 @@ export default class WorldSituation extends Component{
 					</thead>
 					<tbody>
 						<tr className='data'>
-							<td>20438명</td>
+							<td>24324명</td>
 							<td>0명</td>
-							<td>425명</td>
+							<td>490명</td>
 						</tr>
 					</tbody>
 				</table>
