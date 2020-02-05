@@ -28,7 +28,7 @@ export default class KoreaSituation extends Component{
 				<table className="suspect">
 					<thead>
 						<tr>
-							<th colspan="3">조사대상 유증상자</th>
+							<th colSpan="3">조사대상 유증상자</th>
 						</tr>
 						<tr>
 							<th>계</th>
