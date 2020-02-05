@@ -35,7 +35,7 @@ export default class WorldGraph extends Component{
 					</LineChart>
 				</ResponsiveContainer>
 				<div className='btn_group'>
-					<button onClick={this.weekButtonClicked} className='w_btn'>1주일간 보기</button>
+					<button onClick={this.weekButtonClicked} className='w_btn'>최근1주일 보기</button>
 					<button onClick={this.wholeButtonClicked} className='e_btn'>전체기간 보기</button>
 				</div>
 			</div>

@@ -17,8 +17,8 @@ export default class KoreaSituation extends Component{
 					</thead>
 					<tbody>
 						<tr className='data'>
-							<td>18명</td>
-							<td>0명</td>
+							<td>17명</td>
+							<td>1명</td>
 							<td>0명</td>
 							<td>1318명</td>
 						</tr>
@@ -38,9 +38,9 @@ export default class KoreaSituation extends Component{
 					</thead>
 					<tbody>
 						<tr className='data'>
-							<td>591명</td>
-							<td>129명</td>
-							<td>462명</td>
+							<td>696명</td>
+							<td>174명</td>
+							<td>522명</td>
 						</tr>
 					</tbody>
 				</table>
