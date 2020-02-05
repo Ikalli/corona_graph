@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { LineChart, XAxis, YAxis, CartesianGrid, Line, Tooltip, Legend, ResponsiveContainer} from 'recharts';
+import './button.css';
 
 export default class KoreaGraph extends Component{
 	state = {
@@ -37,10 +38,13 @@ export default class KoreaGraph extends Component{
 						<Line activedot={{ onClick:this.handleClickPurple }} type='monotone' dataKey="확진자" stroke='#8884d8' />
 						<Line activedot={{ onClick:this.handleClickRed }} type='monotone' dataKey="사망자" stroke='red' />
 						<Line activedot={{ onClick:this.handleClickRed }} type='monotone' dataKey="완치자" stroke='green' />
+						<Tooltip />
 					</LineChart>
 				</ResponsiveContainer>
-				<button onClick={this.weekButtonClicked}>1주일간 보기</button>
-				<button onClick={this.wholeButtonClicked}>전체기간 보기</button>
+				<div className='btn_group'>
+					<button onClick={this.weekButtonClicked} className='w_btn'>1주일간 보기</button>
+					<button onClick={this.wholeButtonClicked} className='e_btn'>전체기간 보기</button>
+				</div>
 			</div>
 		);
 	}
