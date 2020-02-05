@@ -1,0 +1,40 @@
+.patient {
+	font-size: 23px;
+	margin-top: 20px;
+	padding: 20px 20px;
+	flex: 1;
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.suspect {
+	font-size: 23px;
+	margin-top: 20px;
+	padding: 20px 20px;
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+	white-space: nowrap;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.china {
+	font-size: 23px;
+	margin-top: 20px;
+	padding: 20px 20px;
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+	white-space: nowrap;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+th, td {
+	padding: 5px 5px;
+	border: 3px solid black;
+}
